@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--xs:include schemaLocation="avs-common-types.xsd"/-->
+    <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.va.gov/va-avs-ws/schemas http://www.va.gov/va-avs-ws/schemas/avs-pdf-query-request.xsd -->
+    <xs:element name="AfterVisitSummarySearchRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="afterVisitSummarySearchCriteria">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="clientId" type="xs:string"/>
+                            <xs:element name="veteranId" type="xs:string"/>
+                            <xs:element name="startDate" type="xs:date"/>
+                            <xs:element name="endDate" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="WebServiceResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="messages" minOccurs="0" maxOccurs="1" >
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="message" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="requestStatus">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Failure"/>
+                                        <xs:enumeration value="Successful"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="payload">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="afterVisitSummaries" nillable="true" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="afterVisitSummary" minOccurs="1" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="id" type="xs:string"/>
+                                                    <xs:element name="name" type="xs:string"/>
+                                                    <xs:element name="description" type="xs:string"/>
+                                                    <xs:element name="veteranId" type="xs:string"/>
+                                                    <xs:element name="createdDate" type="xs:dateTime"/>
+                                                    <xs:element name="data" type="xs:base64Binary" minOccurs="0" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

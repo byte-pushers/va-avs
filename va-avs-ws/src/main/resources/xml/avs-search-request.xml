@@ -1,0 +1,8 @@
+<AfterVisitSummarySearchRequest>
+    <afterVisitSummarySearchCriteria>
+        <clientId>345</clientId>
+        <veteranId>765</veteranId>
+        <startDate>2015-01-01T15:48:31.146</startDate>
+        <endDate>2014-01-05T15:48:31.146</endDate>
+    </afterVisitSummarySearchCriteria>
+</AfterVisitSummarySearchRequest>

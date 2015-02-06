@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+	    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-3.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	   ">
+    <context:component-scan base-package="gov.va.med.avs" />
+    <mvc:annotation-driven/>
+    <context:annotation-config/>
+
+    <!--import resource="classpath:spring/jaxb2-marshaller-context.xml"/-->
+    <!--import resource="classpath:spring/json-message-converter-context.xml"/-->
+    <import resource="classpath:spring/message-converter-context.xml"/>
+    <!--import resource="classpath:spring/services-context.xml"/-->
+
+
+
+
+    <!--To enable @RequestMapping process on type level and method level-->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters" ref="messageConvertersList"/>
+            <!--util:list id="beanList">
+                <ref bean="stringHttpMessageConverter"/>
+                <ref bean="marshallingHttpMessageConverter"/>
+                <ref bean="jackson2HttpMessageConverter"/>
+            </util:list>
+        </property-->
+    </bean>
+
+    <!--bean id="marshallingView" class="org.springframework.web.servlet.view.xml.MarshallingView">
+        <constructor-arg ref="jaxb2Marshaller" />
+    </bean-->
+
+    <!--bean id="viewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver" /-->
+    <!--bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="mediaTypes">
+            <map>
+                <entry key="json" value="application/json" />
+                <entry key="xml" value="application/xml" />
+                <entry key="htm" value="text/html"/>
+            </map>
+        </property>
+        <property name="defaultContentType" value="application/xml" />
+        <property name="favorParameter" value="true" />
+        <property name="viewResolvers">
+            <list>
+                <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/-->
+                <!--bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+                    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+                    <property name="prefix" value="/WEB-INF/jsp/"/>
+                    <property name="suffix" value=".jsp"/>
+                </bean-->
+            <!--/list>
+        </property>
+    </bean-->
+
+    <!--bean id="afterVisitSummaryController" class="gov.va.med.avs.controller.AfterVisitSummaryController"-->
+        <!--constructor-arg ref="pricingLabelCountService" /-->
+    <!--/bean-->
+</beans>

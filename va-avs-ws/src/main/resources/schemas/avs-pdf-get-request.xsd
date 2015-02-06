@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="avs-common-types.xsd"/>
+
+    <xs:element name="AfterVisitSummaryResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="status"/>
+                <xs:element name="afterVisitSummaries" nillable="true" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="afterVisitSummaries" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>

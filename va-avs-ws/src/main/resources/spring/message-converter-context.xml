@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/util
+            http://www.springframework.org/schema/util/spring-util.xsd
+       ">
+
+    <import resource="classpath:spring/jaxb2-marshaller-context.xml"/>
+    <import resource="classpath:spring/json-message-converter-context.xml"/>
+
+    <bean id="stringHttpMessageConverter"
+          class="org.springframework.http.converter.StringHttpMessageConverter"/>
+
+    <bean id="marshallingHttpMessageConverter"
+          class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
+        <property name="marshaller" ref="jaxb2Marshaller" />
+        <property name="unmarshaller" ref="jaxb2Marshaller" />
+    </bean>
+
+    <util:list id="messageConvertersList">
+        <ref bean="marshallingHttpMessageConverter"/>
+        <ref bean="jackson2HttpMessageConverter"/>
+        <ref bean="stringHttpMessageConverter"/>
+    </util:list>
+</beans>
