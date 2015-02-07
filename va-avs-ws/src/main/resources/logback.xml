@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.ConsoleAppender">
+        <file>/Users/tonte/repos/git/byte-pushers/va-avs/target/avs.log</file>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <logger name="org.hibernate" level="DEBUG" />
+
+    <logger name="org.springframework" level="TRACE" />
+    <logger name="org.springframework.transaction" level="INFO" />
+    <logger name="org.springframework.security" level="INFO" /> <!-- to debug security related issues (DEBUG) -->
+    <logger name="org.springframework.web.servlet.mvc" level="TRACE" /> <!-- some serialization issues are at trace level here: org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod -->
+
+    <!-- our service -->
+    <logger name="gov.va.med.avs" level="DEBUG" />
+    <!-- <logger name="com.app" level="INFO" /> --><!-- to follow if setup is being executed -->
+
+    <root level="debug">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
