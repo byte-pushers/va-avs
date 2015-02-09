@@ -23,6 +23,7 @@
                         <util:constant static-field="com.sun.xml.bind.api.JAXBRIContext.ANNOTATION_READER"/>
                     </key>
 
+
                     <bean class="org.jboss.jaxb.intros.IntroductionsAnnotationReader">
                         <constructor-arg ref="jaxbIntroductions"/>
                     </bean>

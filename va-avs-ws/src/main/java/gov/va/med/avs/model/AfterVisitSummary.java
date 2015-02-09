@@ -14,7 +14,7 @@ public class AfterVisitSummary{
     private String name;
     private String description;
     private Date createdDate;
-    private Byte[] data;
+    private byte[] base64EncodedPDF;
 
     public AfterVisitSummary() {
 
@@ -27,13 +27,13 @@ public class AfterVisitSummary{
         this.createdDate = createdDate;
     }
 
-    public AfterVisitSummary(String id, String veteranId, String name, String description, Date createdDate, Byte[] data) {
+    public AfterVisitSummary(String id, String veteranId, String name, String description, Date createdDate, byte[] base64EncodedPDF) {
         this.id = id;
         this.veteranId = veteranId;
         this.name = name;
         this.description = description;
         this.createdDate = createdDate;
-        this.data = data;
+        this.base64EncodedPDF = base64EncodedPDF;
     }
 
     public String getId() {
@@ -57,7 +57,7 @@ public class AfterVisitSummary{
         return createdDate;
     }
 
-    public Byte[] getData() {
-        return data;
+    public byte[] getBase64EncodedPDF() {
+        return base64EncodedPDF;
     }
 }

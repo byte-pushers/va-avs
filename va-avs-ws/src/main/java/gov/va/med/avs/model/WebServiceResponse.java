@@ -1,8 +1,6 @@
 package gov.va.med.avs.model;
 
 import java.io.Serializable;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Tonté Pouncil on 2/4/15.

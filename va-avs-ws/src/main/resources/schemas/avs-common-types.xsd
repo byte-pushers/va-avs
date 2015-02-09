@@ -31,7 +31,7 @@
                 <xs:element name="description" type="xs:string"/>
                 <xs:element name="veteranId" type="xs:string"/>
                 <xs:element name="createdDate" type="xs:dateTime"/>
-                <xs:element name="data" type="xs:base64Binary" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="base64EncodedPDF" type="xs:base64Binary" minOccurs="0" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

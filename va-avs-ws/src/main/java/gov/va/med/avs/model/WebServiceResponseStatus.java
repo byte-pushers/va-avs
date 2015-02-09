@@ -21,7 +21,7 @@ public class WebServiceResponseStatus {
         }
     }
 
-    private List<String> messages;
+    private List<WebServiceResponseMessage> messages;
     private Request requestStatus;
 
     public WebServiceResponseStatus() {}
@@ -30,12 +30,12 @@ public class WebServiceResponseStatus {
         this.requestStatus = requestStatus;
     }
 
-    public WebServiceResponseStatus(Request requestStatus, List<String> messages){
+    public WebServiceResponseStatus(Request requestStatus, List<WebServiceResponseMessage> messages){
         this.messages = messages;
         this.requestStatus = requestStatus;
     }
 
-    public List<String> getMessages() {
+    public List<WebServiceResponseMessage> getMessages() {
         return messages;
     }
 

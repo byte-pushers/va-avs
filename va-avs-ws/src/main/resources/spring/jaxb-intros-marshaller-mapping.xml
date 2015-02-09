@@ -28,11 +28,19 @@
             <XmlElement name="requestStatus" />
         </Field>
     </Class>
+    <Class name="gov.va.med.avs.model.WebServiceResponseMessage">
+        <XmlAccessorType value="FIELD"/>
+        <XmlType propOrder="{'value'}"/>
+        <Field name="value">
+            <XmlElement name="message" />
+        </Field>
+    </Class>
     <Class name="gov.va.med.avs.model.WebServicePayload">
         <XmlAccessorType value="FIELD"/>
         <XmlType propOrder="{'afterVisitSummaries'}"/>
         <Field name="afterVisitSummaries">
-            <XmlElement name="afterVisitSummaries"/>
+            <XmlElement name="afterVisitSummary"/>
+            <XmlElementWrapper name="afterVisitSummaries" required="true"/>
         </Field>
     </Class>
 
@@ -65,7 +73,7 @@
     </Class>
     <Class name="gov.va.med.avs.model.AfterVisitSummary">
         <XmlAccessorType value="FIELD"/>
-        <XmlType propOrder="{'id', 'veteranId', 'name', 'description', 'createdDate', 'data'}"/>
+        <XmlType propOrder="{'id', 'veteranId', 'name', 'description', 'createdDate', 'base64EncodedPDF'}"/>
         <Field name="id">
             <XmlElement name="id" required="true"/>
         </Field>
@@ -79,11 +87,11 @@
             <XmlElement name="description" required="true"/>
         </Field>
         <Field name="createdDate">
-            <XmlElement name="createDate" required="true"/>
+            <XmlElement name="createdDate" required="true"/>
             <XmlJavaTypeAdapter value="gov.va.med.avs.model.jaxb.adapter.DateTimeAdapter"/>
         </Field>
-        <Field name="data">
-            <XmlElement name="data"/>
+        <Field name="base64EncodedPDF">
+            <XmlElement name="base64EncodedPDF"/>
         </Field>
     </Class>
 </jaxb-intros>
