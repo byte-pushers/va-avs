@@ -40,16 +40,32 @@ public class AfterVisitSummary{
         return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getVeteranId() {
         return veteranId;
+    }
+
+    public void setVeteranId(String veteranId) {
+        this.veteranId = veteranId;
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getDescription() {
         return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @JsonSerialize(using=JsonDateSerializer.class)
@@ -57,7 +73,15 @@ public class AfterVisitSummary{
         return createdDate;
     }
 
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
     public byte[] getBase64EncodedPDF() {
         return base64EncodedPDF;
+    }
+
+    public void setBase64EncodedPDF(byte[] base64EncodedPDF) {
+        this.base64EncodedPDF = base64EncodedPDF;
     }
 }

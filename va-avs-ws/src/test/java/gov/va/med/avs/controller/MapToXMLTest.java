@@ -17,11 +17,8 @@ import org.springframework.core.io.Resource;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.util.Base64Utils;
-import sun.misc.BASE64Decoder;
 
 import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.IOException;
@@ -58,13 +55,13 @@ public class MapToXMLTest {
         String expectedXML = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><WebServiceResponse><status><messages><message>AVS Found.</message></messages><requestStatus>Successful</requestStatus></status><payload><afterVisitSummaries><afterVisitSummary><id>1</id><veteranId>54321</veteranId><name>Pouncil AVS</name><description>AVS for Mr. Pouncil.</description><createdDate>" + todaysDateAsString + "</createdDate><base64EncodedPDF>"+ base64EncodedPdfData +"</base64EncodedPDF></afterVisitSummary></afterVisitSummaries></payload></WebServiceResponse>";
         StringWriter sw = new StringWriter();
 
-        JaxbIntros config = IntroductionsConfigParser.parseConfig(new ClassPathResource("spring/jaxb-intros-marshaller-mapping.xml").getInputStream());
-        IntroductionsAnnotationReader reader = new IntroductionsAnnotationReader(config);
-        Map<String, Object> jaxbConfig = new HashMap<String, Object>();
+        //JaxbIntros config = IntroductionsConfigParser.parseConfig(new ClassPathResource("spring/jaxb-intros-marshaller-mapping.xml").getInputStream());
+        //IntroductionsAnnotationReader reader = new IntroductionsAnnotationReader(config);
+        //Map<String, Object> jaxbConfig = new HashMap<String, Object>();
 
         //jaxbConfig.put(JAXBRIContext.DEFAULT_NAMESPACE_REMAP, "http://localhost:8080/va-avs-ws/schemas");
-        jaxbConfig.put(JAXBRIContext.ANNOTATION_READER, reader);
-        JAXBContext jaxbContext = JAXBContext.newInstance(new Class[] {WebServiceResponse.class}, jaxbConfig);
+        //jaxbConfig.put(JAXBRIContext.ANNOTATION_READER, reader);
+        //JAXBContext jaxbContext = JAXBContext.newInstance(new Class[] {WebServiceResponse.class}, jaxbConfig);
         jaxb2Marshaller.marshal(getWebServiceResponse(todaysDate), new StreamResult(sw));
 
         assertEquals(expectedXML, sw.toString());
@@ -106,8 +103,8 @@ public class MapToXMLTest {
         Map<String, Object> jaxbConfig = new HashMap<String, Object>();
 
         //jaxbConfig.put(JAXBRIContext.DEFAULT_NAMESPACE_REMAP, "http://localhost:8080/va-avs-ws/schemas");
-        jaxbConfig.put(JAXBRIContext.ANNOTATION_READER, reader);
-        JAXBContext jaxbContext = JAXBContext.newInstance(new Class[] {AfterVisitSummarySearchRequest.class}, jaxbConfig);
+        //jaxbConfig.put(JAXBRIContext.ANNOTATION_READER, reader);
+        //JAXBContext jaxbContext = JAXBContext.newInstance(new Class[] {AfterVisitSummarySearchRequest.class}, jaxbConfig);
         jaxb2Marshaller.marshal(getAfterVisitSummarySearchRequest(), new StreamResult(sw));
 
         assertEquals(expectedXML, sw.toString());

@@ -13,9 +13,6 @@
     <import resource="classpath:spring/jaxb2-marshaller-context.xml"/>
     <import resource="classpath:spring/json-message-converter-context.xml"/>
 
-    <bean id="stringHttpMessageConverter"
-          class="org.springframework.http.converter.StringHttpMessageConverter"/>
-
     <bean id="marshallingHttpMessageConverter"
           class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
         <property name="marshaller" ref="jaxb2Marshaller" />
@@ -23,8 +20,8 @@
     </bean>
 
     <util:list id="messageConvertersList">
-        <ref bean="marshallingHttpMessageConverter"/>
         <ref bean="jackson2HttpMessageConverter"/>
-        <ref bean="stringHttpMessageConverter"/>
+        <ref bean="marshallingHttpMessageConverter"/>
+
     </util:list>
 </beans>

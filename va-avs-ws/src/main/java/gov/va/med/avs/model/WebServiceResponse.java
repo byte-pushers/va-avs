@@ -20,7 +20,15 @@ public class WebServiceResponse implements Serializable {
         return status;
     }
 
+    public void setStatus(WebServiceResponseStatus status) {
+        this.status = status;
+    }
+
     public WebServicePayload getPayload() {
         return payload;
+    }
+
+    public void setPayload(WebServicePayload payload) {
+        this.payload = payload;
     }
 }

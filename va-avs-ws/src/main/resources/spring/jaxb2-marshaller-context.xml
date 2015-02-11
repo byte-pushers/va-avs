@@ -9,7 +9,9 @@
             http://www.springframework.org/schema/util/spring-util.xsd
        ">
 
-    <bean id="jaxb2Marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+    <bean class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"/>
+
+    <bean id="jaxb2Marshaller" class="gov.va.med.avs.jaxb.JaxbIntroductionsMarshaller"> <!--  gov.va.med.avs.jaxb.Jaxb2Marshaller org.springframework.oxm.jaxb.Jaxb2Marshaller -->
         <property name="classesToBeBound">
             <list>
                 <value>gov.va.med.avs.model.AfterVisitSummarySearchRequest</value>
@@ -22,7 +24,6 @@
                     <key>
                         <util:constant static-field="com.sun.xml.bind.api.JAXBRIContext.ANNOTATION_READER"/>
                     </key>
-
 
                     <bean class="org.jboss.jaxb.intros.IntroductionsAnnotationReader">
                         <constructor-arg ref="jaxbIntroductions"/>

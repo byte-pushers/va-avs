@@ -18,4 +18,8 @@ public class WebServicePayload {
     public List<AfterVisitSummary> getAfterVisitSummaries() {
         return afterVisitSummaries;
     }
+
+    public void setAfterVisitSummaries(List<AfterVisitSummary> afterVisitSummaries) {
+        this.afterVisitSummaries = afterVisitSummaries;
+    }
 }

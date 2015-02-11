@@ -13,9 +13,9 @@ import java.util.*;
 @Controller
 public class AfterVisitSummaryController {
 
-    @RequestMapping(value = "/afterVisitSummaries", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.TEXT_XML_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @RequestMapping(value = "/afterVisitSummaries", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
     @ResponseBody
-    public WebServiceResponse getAfterVisitSummaries(@RequestBody AfterVisitSummarySearchRequest avsSearchRequest) {
+    public WebServiceResponse getAfterVisitSummariesAsJSON(@RequestBody AfterVisitSummarySearchRequest avsSearchRequest) {
         List<AfterVisitSummary> afterVisitSummaries = new ArrayList<AfterVisitSummary>();
         afterVisitSummaries.add(new AfterVisitSummary("0", "1234", "After Visit Summary", "After Visit Summary", new Date()));
 
@@ -23,4 +23,15 @@ public class AfterVisitSummaryController {
 
         return new WebServiceResponse(new WebServiceResponseStatus(WebServiceResponseStatus.Request.Successful), payload);
     }
+
+    /*@RequestMapping(value = "/afterVisitSummary", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_XML_VALUE}, produces = {MediaType.APPLICATION_XML_VALUE})
+    @ResponseBody
+    public WebServiceResponse getAfterVisitSummariesAsXML(@RequestBody AfterVisitSummarySearchRequest avsSearchRequest) {
+        List<AfterVisitSummary> afterVisitSummaries = new ArrayList<AfterVisitSummary>();
+        afterVisitSummaries.add(new AfterVisitSummary("0", "1234", "After Visit Summary", "After Visit Summary", new Date()));
+
+        WebServicePayload payload = new WebServicePayload(afterVisitSummaries);
+
+        return new WebServiceResponse(new WebServiceResponseStatus(WebServiceResponseStatus.Request.Successful), payload);
+    }*/
 }

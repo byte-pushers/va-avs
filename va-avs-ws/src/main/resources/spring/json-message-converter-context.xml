@@ -9,8 +9,8 @@
         <!--property name="objectMapper" ref="jacksonObjectMapper" /-->
         <property name="objectMapper">
             <bean class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean"
-                  p:autoDetectFields="false"
-                  p:autoDetectGettersSetters="false"
+                  p:autoDetectFields="true"
+                  p:autoDetectGettersSetters="true"
                   p:annotationIntrospector-ref="jsonAnnotationIntrospector" />
         </property>
     </bean>

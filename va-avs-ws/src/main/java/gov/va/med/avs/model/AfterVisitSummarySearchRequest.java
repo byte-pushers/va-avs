@@ -5,7 +5,9 @@ import java.io.Serializable;
 /**
  * Created by Tonté Pouncil on 2/5/15.
  */
-public class AfterVisitSummarySearchRequest implements Serializable {
+
+public class AfterVisitSummarySearchRequest {
+
     private AfterVisitSummarySearchCriteria afterVisitSummarySearchCriteria;
 
     public AfterVisitSummarySearchRequest() {}
@@ -16,5 +18,9 @@ public class AfterVisitSummarySearchRequest implements Serializable {
 
     public AfterVisitSummarySearchCriteria getAfterVisitSummarySearchCriteria() {
         return afterVisitSummarySearchCriteria;
+    }
+
+    public void setAfterVisitSummarySearchCriteria(AfterVisitSummarySearchCriteria afterVisitSummarySearchCriteria) {
+        this.afterVisitSummarySearchCriteria = afterVisitSummarySearchCriteria;
     }
 }

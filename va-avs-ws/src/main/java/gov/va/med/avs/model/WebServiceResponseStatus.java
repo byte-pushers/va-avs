@@ -39,7 +39,15 @@ public class WebServiceResponseStatus {
         return messages;
     }
 
+    public void setMessages(List<WebServiceResponseMessage> messages) {
+        this.messages = messages;
+    }
+
     public Request getRequestStatus(){
         return requestStatus;
+    }
+
+    public void setRequestStatus(Request requestStatus) {
+        this.requestStatus = requestStatus;
     }
 }
