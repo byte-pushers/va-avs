@@ -22,6 +22,5 @@
     <util:list id="messageConvertersList">
         <ref bean="jackson2HttpMessageConverter"/>
         <ref bean="marshallingHttpMessageConverter"/>
-
     </util:list>
 </beans>

@@ -17,23 +17,5 @@
 	   ">
     <context:component-scan base-package="gov.va.med.avs" />
 
-
     <import resource="classpath:spring/message-converter-context.xml"/>
-
-    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
-
-    <!--bean id="webMvcConfigurerAdapter"
-          class="org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter"
-          abstract="true">
-    </bean>
-
-    <bean id="webConfig" class="gov.va.med.avs.controller.WebConfig" parent="webMvcConfigurerAdapter">
-        <constructor-arg ref="messageConvertersList"/>
-    </bean-->
-
-    <!--To enable @RequestMapping process on type level and method level-->
-    <!--bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
-        <property name="messageConverters" ref="messageConvertersList"/>
-    </bean-->
-    <!--<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" /-->
 </beans>
