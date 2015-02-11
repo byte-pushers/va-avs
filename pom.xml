@@ -5,7 +5,7 @@
     <groupId>gov.va.med.lom</groupId>
     <artifactId>va-avs-ws</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging></packaging>
+    <packaging>pom</packaging>
 
     <name>va-avs</name>
     <url>http://maven.apache.org</url>
