@@ -8,7 +8,9 @@
 </AfterVisitSummarySearchRequest>
 <WebServiceResponse>
     <status>
-        <messages/>
+        <messages>
+            <message>User friendly message.</message>
+        </messages>
         <requestStatus>Successful</requestStatus>
     </status>
     <payload>
