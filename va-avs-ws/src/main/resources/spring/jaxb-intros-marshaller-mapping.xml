@@ -22,19 +22,14 @@
         <XmlAccessorType value="FIELD"/>
         <XmlType propOrder="{'messages', 'requestStatus'}"/>
         <Field name="messages">
-            <XmlElement name="messages" />
+            <XmlElement name="message" />
+            <XmlElementWrapper name="messages" required="true"/>
         </Field>
         <Field name="requestStatus">
             <XmlElement name="requestStatus" />
         </Field>
     </Class>
-    <Class name="gov.va.med.avs.model.WebServiceResponseMessage">
-        <XmlAccessorType value="FIELD"/>
-        <XmlType propOrder="{'value'}"/>
-        <Field name="value">
-            <XmlElement name="message" />
-        </Field>
-    </Class>
+
     <Class name="gov.va.med.avs.model.WebServicePayload">
         <XmlAccessorType value="FIELD"/>
         <XmlType propOrder="{'afterVisitSummaries'}"/>

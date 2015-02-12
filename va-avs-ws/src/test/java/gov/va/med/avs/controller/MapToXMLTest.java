@@ -135,8 +135,8 @@ public class MapToXMLTest {
     }
 
     private WebServiceResponse getWebServiceResponse(Date avsDate) {
-        List<WebServiceResponseMessage> messages = new ArrayList<WebServiceResponseMessage>();
-        messages.add(new WebServiceResponseMessage("AVS Found."));
+        List<String> messages = new ArrayList<String>();
+        messages.add("AVS Found.");
         WebServiceResponseStatus status = new WebServiceResponseStatus(WebServiceResponseStatus.Request.Successful, messages);
         AfterVisitSummary avs = new AfterVisitSummary("1", "54321", "Pouncil AVS", "AVS for Mr. Pouncil.", avsDate, getPdf("avs-test.pdf"));
 

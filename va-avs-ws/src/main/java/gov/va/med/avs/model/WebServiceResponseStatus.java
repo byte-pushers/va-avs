@@ -1,5 +1,6 @@
 package gov.va.med.avs.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,7 +22,7 @@ public class WebServiceResponseStatus {
         }
     }
 
-    private List<WebServiceResponseMessage> messages;
+    private List<String> messages = new ArrayList<String>();
     private Request requestStatus;
 
     public WebServiceResponseStatus() {}
@@ -30,16 +31,16 @@ public class WebServiceResponseStatus {
         this.requestStatus = requestStatus;
     }
 
-    public WebServiceResponseStatus(Request requestStatus, List<WebServiceResponseMessage> messages){
+    public WebServiceResponseStatus(Request requestStatus, List<String> messages){
         this.messages = messages;
         this.requestStatus = requestStatus;
     }
 
-    public List<WebServiceResponseMessage> getMessages() {
+    public List<String> getMessages() {
         return messages;
     }
 
-    public void setMessages(List<WebServiceResponseMessage> messages) {
+    public void setMessages(List<String> messages) {
         this.messages = messages;
     }
 

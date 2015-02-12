@@ -1,8 +1,25 @@
 <AfterVisitSummarySearchRequest>
     <afterVisitSummarySearchCriteria>
-        <clientId>345</clientId>
-        <veteranId>765</veteranId>
-        <startDate>2015-01-01T15:48:31.146</startDate>
-        <endDate>2014-01-05T15:48:31.146</endDate>
+        <clientId>12345</clientId>
+        <veteranId>54321</veteranId>
+        <startDate>2008-09-28</startDate>
+        <endDate>2014-09-18</endDate>
     </afterVisitSummarySearchCriteria>
 </AfterVisitSummarySearchRequest>
+<WebServiceResponse>
+    <status>
+        <messages/>
+        <requestStatus>Successful</requestStatus>
+    </status>
+    <payload>
+        <afterVisitSummaries>
+            <afterVisitSummary>
+                <id>0</id>
+                <veteranId>1234</veteranId>
+                <name>After Visit Summary</name>
+                <description>After Visit Summary</description>
+                <createdDate>2015-02-12T09:19:34</createdDate>
+            </afterVisitSummary>
+        </afterVisitSummaries>
+    </payload>
+</WebServiceResponse>

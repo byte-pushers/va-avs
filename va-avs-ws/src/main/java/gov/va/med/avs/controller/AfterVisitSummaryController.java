@@ -21,17 +21,6 @@ public class AfterVisitSummaryController {
 
         WebServicePayload payload = new WebServicePayload(afterVisitSummaries);
 
-        return new WebServiceResponse(new WebServiceResponseStatus(WebServiceResponseStatus.Request.Successful), payload);
+        return new WebServiceResponse(new WebServiceResponseStatus(WebServiceResponseStatus.Request.Successful, new ArrayList<String>()), payload);
     }
-
-    /*@RequestMapping(value = "/afterVisitSummary", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_XML_VALUE}, produces = {MediaType.APPLICATION_XML_VALUE})
-    @ResponseBody
-    public WebServiceResponse getAfterVisitSummariesAsXML(@RequestBody AfterVisitSummarySearchRequest avsSearchRequest) {
-        List<AfterVisitSummary> afterVisitSummaries = new ArrayList<AfterVisitSummary>();
-        afterVisitSummaries.add(new AfterVisitSummary("0", "1234", "After Visit Summary", "After Visit Summary", new Date()));
-
-        WebServicePayload payload = new WebServicePayload(afterVisitSummaries);
-
-        return new WebServiceResponse(new WebServiceResponseStatus(WebServiceResponseStatus.Request.Successful), payload);
-    }*/
 }
