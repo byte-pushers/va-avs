@@ -1,4 +1,5 @@
 curl -k -i -X GET -H "Content-Type: application/json" -H "Accepts: application/json" -d '{"afterVisitSummarySearchCriteria": {"clientId":345,"veteranId": "765","startDate":"2015-01-01T15:48:31.146","endDate":"2014-01-05T15:48:31.146"}}' http://localhost:8080/va-avs-ws/service/afterVisitSummaries.json
 curl -k -i -X GET -H "Content-Type: application/xml" -H "Accepts: application/xml" -d '<AfterVisitSummarySearchRequest><afterVisitSummarySearchCriteria><clientId>12345</clientId><veteranId>54321</veteranId><startDate>2008-09-28</startDate><endDate>2014-09-18</endDate></afterVisitSummarySearchCriteria></AfterVisitSummarySearchRequest>' http://localhost:8080/va-avs-ws/service/afterVisitSummaries.xml
-
-curl -k -i -X GET -H "Content-Type:application/xml,application/json" -H "Accepts:application/xml,application/json" -d '' http://localhost:8080/va-avs-ws/service/afterVisitSummaries.xml
+curl -i -X GET -H "Content-Type: application/json" -H "Accepts: application/json" --data 'clientId=12345&veteranId=54321' http://localhost:8080/va-avs-ws/service/afterVisitSummaries/1.json
+curl -i -X GET "http://localhost:8080/va-avs-ws/service/afterVisitSummaries/1.json?clientId=12345&veteranId=54321"
+curl -i -X GET "http://localhost:8080/va-avs-ws/service/afterVisitSummaries/1.xml?clientId=12345&veteranId=54321"
