@@ -7,10 +7,27 @@
     </afterVisitSummarySearchCriteria>
 </AfterVisitSummarySearchRequest>
 <WebServiceResponse>
+<status>
+    <messages>
+        <message>User friendly message.</message>
+    </messages>
+    <requestStatus>Successful</requestStatus>
+</status>
+<payload>
+    <afterVisitSummaries>
+        <afterVisitSummary>
+            <id>0</id>
+            <veteranId>1234</veteranId>
+            <name>After Visit Summary</name>
+            <description>After Visit Summary</description>
+            <createdDate>2015-02-12T09:19:34</createdDate>
+        </afterVisitSummary>
+    </afterVisitSummaries>
+</payload>
+</WebServiceResponse>
+<WebServiceResponse>
     <status>
-        <messages>
-            <message>User friendly message.</message>
-        </messages>
+        <messages/>
         <requestStatus>Successful</requestStatus>
     </status>
     <payload>
@@ -20,7 +37,8 @@
                 <veteranId>1234</veteranId>
                 <name>After Visit Summary</name>
                 <description>After Visit Summary</description>
-                <createdDate>2015-02-12T09:19:34</createdDate>
+                <createdDate>2015-02-18T08:53:58</createdDate>
+                <base64EncodedPDF>JVBERi0xLjMKJcTl8uXrp/Og0MTGCjQ</base64EncodedPDF>
             </afterVisitSummary>
         </afterVisitSummaries>
     </payload>
