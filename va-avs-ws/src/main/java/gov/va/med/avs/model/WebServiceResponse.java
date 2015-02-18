@@ -16,6 +16,10 @@ public class WebServiceResponse implements Serializable {
         this.payload = payload;
     }
 
+    public WebServiceResponse(WebServiceResponseStatus status) {
+        this.status = status;
+    }
+
     public WebServiceResponseStatus getStatus() {
         return status;
     }
