@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectors encryptionScoped="false" xsi:noNamespaceSchemaLocation="connectorConfig.xsd"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://med.va.gov/vistalink/adapter/config">
+
+
+    <connector jndiName="vlj/harrissite" primaryStation="050" ip="vps-dev01.harris-hc-lab.com" port="8001"
+               access-code="sqaavs01"
+               verify-code="harrissqa01." encrypted="false" enabled="true" always-use-default-as-min="false">
+    </connector>
+
+</connectors>

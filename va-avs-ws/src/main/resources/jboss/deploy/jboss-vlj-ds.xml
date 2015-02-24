@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<connection-factories>
+    <no-tx-connection-factory>
+        <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+        <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+        <jndi-name>vlj/harrissite</jndi-name>
+        <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+        <config-property name="connectorJndiName" type="java.lang.String">vlj/testsite</config-property>
+        <min-pool-size>5</min-pool-size>
+        <max-pool-size>25</max-pool-size>
+        <blocking-timeout-millis>5000</blocking-timeout-millis>
+        <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory>
+    <!--no-tx-connection-factory>
+    <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+        <jndi-name>vlj/lomalinda</jndi-name>
+        <adapter-display-name>VistaLinkAdapter</adapter-display-name-->
+
+        <!-- example of how to if needed later
+        <config-property name="hostIPAddress" type="java.lang.String">10.1.19.10</config-property>
+        -->
+        <!--config-property name="connectorJndiName" type="java.lang.String">vlj/lomalinda</config-property->
+
+        <!-pooling parameters-->
+        <!--min-pool-size>5</min-pool-size>
+        <max-pool-size>25</max-pool-size-->
+            <!-- blocking-timeout-millis: This element specifies the maximum 
+                time in milliseconds to block while waiting for a connection 
+                before throwing an exception. Note that this blocks only while 
+                waiting for a permit for a connection, and will never throw 
+                an exception if creating a new connection takes an
+                inordinately long time. The default is 5000. -->
+        <!--blocking-timeout-millis>5000</blocking-timeout-millis-->
+            <!-- idle-timeout-minutes: This element specifies the maximum 
+                time in minutes a connection may be idle before being closed. 
+                The actual maximum time depends also on the IdleRemover 
+                scan time, which is 1/2 the smallest idle-timeout-minutes 
+                of any pool. -->
+        <!--idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory-->
+
+    <!--no-tx-connection-factory>
+      <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+      <jndi-name>vlj/westla</jndi-name>
+      <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+      <config-property name="connectorJndiName" type="java.lang.String">vlj/westla</config-property>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>25</max-pool-size>   
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory> 
+    <no-tx-connection-factory>
+      <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+      <jndi-name>vlj/sandiego</jndi-name>
+      <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+      <config-property name="connectorJndiName" type="java.lang.String">vlj/sandiego</config-property>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>25</max-pool-size>       
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory>      
+    <no-tx-connection-factory>
+      <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+      <jndi-name>vlj/longbeach</jndi-name>
+      <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+      <config-property name="connectorJndiName" type="java.lang.String">vlj/longbeach</config-property>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>25</max-pool-size>
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory>     
+    <no-tx-connection-factory>
+      <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+      <jndi-name>vlj/paloalto</jndi-name>
+      <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+      <config-property name="connectorJndiName" type="java.lang.String">vlj/paloalto</config-property>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>25</max-pool-size>
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory>          
+    <no-tx-connection-factory>
+      <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+      <jndi-name>vlj/cleveland</jndi-name>
+      <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+      <config-property name="connectorJndiName" type="java.lang.String">vlj/cleveland</config-property>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>25</max-pool-size>       
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory-->
+<!--    
+    <no-tx-connection-factory>
+      <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+      <jndi-name>vlj/lasvegas</jndi-name>
+      <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+      <config-property name="connectorJndiName" type="java.lang.String">vlj/lasvegas</config-property>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>25</max-pool-size>       
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory>          
+    <no-tx-connection-factory>
+      <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+      <jndi-name>vlj/hudsonvalley</jndi-name>
+      <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+      <config-property name="connectorJndiName" type="java.lang.String">vlj/hudsonvalley</config-property>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>25</max-pool-size>       
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory>     
+  
+    <no-tx-connection-factory>
+      <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+      <jndi-name>vlj/miami</jndi-name>
+      <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+      <config-property name="connectorJndiName" type="java.lang.String">vlj/miami</config-property>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>25</max-pool-size>       
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory>      
+
+    <no-tx-connection-factory>
+      <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+      <jndi-name>vlj/memphis</jndi-name>
+      <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+      <config-property name="connectorJndiName" type="java.lang.String">vlj/memphis</config-property>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>25</max-pool-size>       
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory>     
+    
+    <no-tx-connection-factory>
+      <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+      <jndi-name>vlj/martinez</jndi-name>
+      <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+      <config-property name="connectorJndiName" type="java.lang.String">vlj/martinez</config-property>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>25</max-pool-size>
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory>    
+    
+    <no-tx-connection-factory>
+      <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+      <jndi-name>vlj/hines</jndi-name>
+      <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+      <config-property name="connectorJndiName" type="java.lang.String">vlj/hines</config-property>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>25</max-pool-size>
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory>     
+
+    <no-tx-connection-factory>
+      <rar-name>vljConnector-1.6.0.028.rar</rar-name>
+      <connection-definition>javax.resource.cci.ConnectionFactory</connection-definition>
+      <jndi-name>vlj/northport</jndi-name>
+      <adapter-display-name>VistaLinkAdapter</adapter-display-name>
+      <config-property name="connectorJndiName" type="java.lang.String">vlj/northport</config-property>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>25</max-pool-size>
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </no-tx-connection-factory>    
+-->    
+</connection-factories>
+
